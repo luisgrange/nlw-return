@@ -19,13 +19,7 @@ routes.post('/feedbacks', async (req, res) => {
     //desestruturando 
     const {type, comment, screenshot} = req.body;
 
-    const feedback = await prisma.feedback.create({
-        data: {
-            type,
-            comment,
-            screenshot,
-        }
-    })
+    const feedback = 
 
     await transport.sendMail({
         from: 'Equipe feedget <oi@feedget.com>',
