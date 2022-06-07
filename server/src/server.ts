@@ -33,8 +33,10 @@ app.post('/feedbacks', async (req, res) => {
         to: 'Luis Fernando <l.grange@protonmail.com>',
         subject: 'Novo feedback',
         html: [
+            `<div styles="font-family: sans-serif; font-size: 16px; color: #111">`,
             `<p>Tipo do feedback ${type}</p>`,
             `<p>Commentário ${comment}</p>`,
+            `</div>`
         ].join('\n')
     });
 
